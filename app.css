@@ -167,6 +167,31 @@ body {
 }
 
 
+.projects {
+    column-count: 4;
+    column-gap: 15px;
+    width: 100%;
+    max-width: 90%;
+    margin: 10px 0 50px;
+}
+
+.div{
+    
+    background-color: red;
+    display: inline-block;
+ width: 100%;
+ margin-bottom: 15px;
+
+}
+
+ .div img {
+   
+     width: 100%;
+    height: auto;
+    display: block;
+    
+}
+
   @media (max-width: 1000px) {
     .skills {
       grid-template-columns: repeat(2, 1fr);
@@ -176,6 +201,10 @@ body {
        max-width: 810px;
        
     }
+    
+.projects {
+    column-count: 3;
+}
   }
 
   
@@ -183,6 +212,10 @@ body {
     .skills {
       grid-template-columns: repeat(1, 1fr);
       padding: 15px;
+      .projects {
+        column-count: 3;
+    }
+
 
     }
 
@@ -203,6 +236,9 @@ body {
        
        
      }
+     .projects {
+        column-count: 2;
+    }
      .left{
         width: 100%;
         margin-bottom: 20px;
