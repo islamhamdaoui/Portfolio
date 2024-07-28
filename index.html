@@ -6,10 +6,10 @@
   <link rel="stylesheet" href="app.css">
 </head>
 <body>
-    <header>
+    <header id="nav">
         <a href="">Home</a>
         <a href="">Resume</a>
-        <a href="">Skills</a>
+        <a href="#skills">Skills</a>
         <a href="">About</a>
     </header>
   <div class="container">
@@ -67,7 +67,7 @@
 
     </div>
 
-    <div class="stack">
+    <div class="stack" id="skills">
         <div class="left">
             <h2>Tech stack</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis optio minima placeat veritatis assumenda soluta iusto aspernatur pariatur officiis, repellat saepe maiores, excepturi iste provident sunt aliquam dolore sequi! Magnam.</p>
@@ -106,5 +106,17 @@
 
 </div>
   </div>
+
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('nav');
+      if (window.scrollY > 260) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
