@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -177,7 +178,6 @@ body {
 
 .div{
     
-    background-color: red;
     display: inline-block;
  width: 100%;
  margin-bottom: 15px;
@@ -189,9 +189,36 @@ body {
      width: 100%;
     height: auto;
     display: block;
-    
+    transition: 0.2s ease;
 }
 
+
+
+.projectInfo img {
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+}
+
+.projectInfo div {
+  display: flex;
+  align-items: center;
+}
+
+.github {
+  color: #fff;
+  width: max-content;
+  padding: 5px 12px;
+  border-radius: 8px;
+  background-color: #000;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.github img {
+  width: 20px;
+  height: 20px;
+}
   @media (max-width: 1000px) {
     .skills {
       grid-template-columns: repeat(2, 1fr);
