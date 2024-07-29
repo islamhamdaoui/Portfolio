@@ -10,7 +10,7 @@
         <a href="#about">Home</a>
         <a href="#skills">Skills</a>
         <a href="" download="YourName_Resume.pdf">Resume</a>
-        <a href="">Contact</a>
+        <a href="#contact">Contact</a>
     </header>
   <div class="container">
     <div class="circle"></div>
@@ -177,18 +177,63 @@
     
   </div>
 
+  <div class="form" id="contact">
+    <div style="width: 100%; text-align: center;">
+      <span >islamhamdaoui2000@gmail.com</span>
+  </div>
+      <form id="contact-form" >
+      <!-- To simplify the tutorial, the value is static. -->
+      <input type="hidden" name="contact_number" value="697483">
+      <label>Name</label>
+      <input type="text" id="name" name="user_name" required>
+      <label>Email</label>
+      <input type="email" id="email" name="user_email" required>
+      <label>Message</label>
+      <textarea name="message" id="message"></textarea>
+      <input type="submit"  value="Send" required>
+    </form>
+  </div>
 
+ 
 
-
-
-
+<div class="rest">.</div>
 
 </div>
 </div>
 
-<button onclick="sendEmail()">Send email</button>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  (function() {
+     
+      emailjs.init({
+        publicKey: "eUE4wmA99KYJvIJb-",
+      });
+  })();
 </script>
-  <script>
+<script type="text/javascript">
+  window.onload = function() {
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          // these IDs from the previous steps
+          emailjs.sendForm('service_ron7een', 'template_uierzd6', this)
+              .then(() => {
+                  console.log('SUCCESS!');
+                  document.getElementById('contact-form').reset();
+              }, (error) => {
+                  console.log('FAILED...', error);
+              });
+      });
+  }
+
+ 
+  
+</script>
+
+
+
+<script>
 
 
 
@@ -213,7 +258,7 @@
         }
 
         // Call the function every half second
-        setInterval(highlightRandomDiv, 1000);
+        setInterval(highlightRandomDiv, 800);
     
   </script>
 </body>
