@@ -7,15 +7,15 @@
 </head>
 <body>
     <header id="nav">
-        <a href="">Home</a>
-        <a href="">Resume</a>
+        <a href="#about">Home</a>
         <a href="#skills">Skills</a>
-        <a href="">About</a>
+        <a href="" download="YourName_Resume.pdf">Resume</a>
+        <a href="">Contact</a>
     </header>
   <div class="container">
     <div class="circle"></div>
     <div class="content">
-      <h1>What I Offer</h1>
+      <h1 id="about">What I Offer</h1>
     <p>I offer a range of services including web development, custom software solutions, API integration, code review, and technical consultation. With my expertise in the latest technologies and best practices, I aim to deliver solutions that meet your needs and exceed your expectations.</p>
     <div class="skills">
         <div class="skill">
@@ -110,22 +110,70 @@
   <div style="width: 100%; padding: 0 60px;"><h3>My recent work</h3></div>
 
   <div class="projects">
-    <div class="div"><img src="socialmedia.jpg" alt="">
+    <!-- project 1 -->
+    <div class="div"><img src="projects/socialmedia.jpg" alt="">
     <div class="projectInfo">
-      <h3>Weather app</h3>
+      <h3>Social media website</h3>
       <div><img src="icons/verified.png" alt="">
-      <span>React, css, php</span> </div>
-      <div class="github"><img src="icons/whitehub.png" alt="">Github</div>
+      <span>Php, html, css, js</span> </div>
+      <a href="https://github.com/islamhamdaoui/Socialmedia-website-PHP-PDO" target="_blank">
+        <div class="github"><img src="icons/whitehub.png" alt="">Github</div></a>
     </div>
     </div>
-    <div class="div"><img src="2.png" alt=""></div>
-    <div class="div"><img src="socialmedia.jpg" alt=""></div>
-    <div class="div"><img src="4.png" alt=""></div>
-    <div class="div"><img src="5.png" alt=""></div>
-    <div class="div"><img src="6.png" alt=""></div>
-    <div class="div"><img src="7.png" alt=""></div>
-    <div class="div"><img src="8.png" alt=""></div>
-    <div class="div"><img src="9.png" alt=""></div>
+    <!-- Project 2 -->
+    <div class="div"><img src="projects/invoice.PNG" alt="">
+      <div class="projectInfo">
+        <h3>Radiology Invoice Management System</h3>
+        <div><img src="icons/verified.png" alt="">
+        <span>Php, html, css</span> </div>
+        <div class="github" ><img src="icons/whitehub.png" alt="">Github</div>
+      </div>
+      </div>
+
+       <!-- project 3-->
+    <div class="div"><img src="projects/notes.png" alt="">
+      <div class="projectInfo">
+        <h3>Public notes</h3>
+        <div><img src="icons/verified.png" alt="">
+        <span>Firebase, html, css, javascript</span> </div>
+        <a href="https://github.com/islamhamdaoui/Notes-with-firebase" target="_blank">
+          <div class="github"><img src="icons/whitehub.png" alt="">Github</div></a>
+      </div>
+      </div>
+         <!-- project 4 -->
+    <div class="div"><img src="projects/weather.jpg" alt="">
+      <div class="projectInfo">
+        <h3>Weather website</h3>
+        <div><img src="icons/verified.png" alt="">
+        <span>html, css, javascript</span> </div>
+        <a href="https://github.com/islamhamdaoui/weather-website" target="_blank">
+          <div class="github"><img src="icons/whitehub.png" alt="">Github</div></a>
+      </div>
+      </div>
+         <!-- project 5 -->
+    <div class="div"><img src="projects/ecommerce.jpg" alt="">
+      <div class="projectInfo">
+        <h3>E-commerce website (Static)</h3>
+        <div><img src="icons/verified.png" alt="">
+        <span>html, css, javascript</span> </div>
+        <a href="https://github.com/islamhamdaoui/E-commerce-website-Static" target="_blank">
+          <div class="github"><img src="icons/whitehub.png" alt="">Github</div></a>
+      </div>
+      </div>
+
+         <!-- Github profile -->
+    <div class="div"><img src="projects/github.png" alt="">
+      <div class="projectInfo">
+        <h3>Rest of projects in github</h3>
+        <div><img src="icons/verified.png" alt="">
+        <span>Php, html, css, js, react, git, bootstrap, sql...</span> </div>
+        <a href="https://github.com/islamhamdaoui" target="_blank">
+          <div class="github"><img src="icons/whitehub.png" alt="">Github</div></a>      </div>
+      </div>
+
+
+
+
     
   </div>
 
@@ -137,7 +185,13 @@
 
 </div>
 </div>
+
+<button onclick="sendEmail()">Send email</button>
+</script>
   <script>
+
+
+
     window.addEventListener('scroll', function() {
       const header = document.getElementById('nav');
       if (window.scrollY > 260) {
@@ -146,6 +200,21 @@
         header.classList.remove('scrolled');
       }
     });
+
+   
+        function highlightRandomDiv() {
+            // Remove highlight from all divs
+            const divs = document.querySelectorAll('.div');
+            divs.forEach(div => div.classList.remove('highlight'));
+
+            // Get a random div and add the highlight class
+            const randomIndex = Math.floor(Math.random() * divs.length);
+            divs[randomIndex].classList.add('highlight');
+        }
+
+        // Call the function every half second
+        setInterval(highlightRandomDiv, 1000);
+    
   </script>
 </body>
 </html>
