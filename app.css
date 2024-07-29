@@ -280,9 +280,33 @@ input[type="submit"]:hover {
 }
 
 
-.rest {
+.socials {
   
-  padding-bottom: 100px;
+  padding: 15px 0 80px;
+  display: flex;
+
+}
+
+.socials img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+.or {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.or hr {
+  margin: 0 10px;
+  width: 200px;
+
+  height:1px;
+  opacity: 0.5;
+  
 }
 
 
