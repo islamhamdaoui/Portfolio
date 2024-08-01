@@ -582,6 +582,7 @@ input[type="submit"]:hover {
     }
     .study {
       margin-top: 30px;
+      margin-left: 0;
       flex-direction: column;
       align-items: center;
       width: fit-content;
@@ -630,4 +631,15 @@ input[type="submit"]:hover {
 
 
   
+  }
+
+
+  @media (max-width: 410px) {
+    .aboutTitle {
+      font-size:23px ;
+    }
+
+    header a {
+      font-size: 16px;
+    }
   }
